@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <include file="struts-default.xml"/>
+    <package name="default" namespace="/" extends="struts-default">
+    
+    <action name="search" >
+		<result>/search.jsp</result>
+	</action>
+	
+	
+	<action name="return" > 
+		<result>/Menu.jsp</result>
+	</action>
+	
+	<action name="writername" class = "com.tutorialspoint.struts2.List" method = "search">
+		<result>/writer.jsp</result>
+	</action>
+	
+    <action name="Delete" class = "com.tutorialspoint.struts2.List" method = "delete">
+		<result>/delete.jsp</result>
+	</action>
+    </package>
+</struts>
